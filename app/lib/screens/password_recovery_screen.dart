@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
+class PasswordRecoveryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +13,7 @@ class LoginScreen extends StatelessWidget {
             children: [
               Image.asset('assets/images/logo.svg', height: 80),
               SizedBox(height: 20),
-              Text("Masuk", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+              Text("Lupa Password", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
               SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
@@ -21,28 +21,10 @@ class LoginScreen extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 10),
-              TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: 'Kata Sandi',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, '/password'),
-                    child: Text("Lupa Password?", style: TextStyle(color: Colors.blue)),
-                  ),
-                ],
-              ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, '/home'),
-                child: Text('Masuk'),
+                onPressed: () {},
+                child: Text('Kirim'),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.blue,
                   padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15),

@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
-import 'screens/splash_screen.dart';
+import 'sreens/flash_screen.dart';
 import 'screens/login_screen.dart';
-import 'screens/forgot_password_screen.dart';
-import 'screens/register_screen.dart';
+import 'screens/password_recovery_screen.dart';
+import 'screens/registration_screen.dart';
+import 'screens/home_screen.dart';
+import 'screens/account_screen.dart';
+import 'screens/profile_screen.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Responsi',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: '/splash',
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/flash',
       routes: {
-        '/splash': (context) => const SplashScreen(),
-        '/login': (context) => const LoginScreen(),
-        '/forgot_password': (context) => const ForgotPasswordScreen(),
-        '/register': (context) => const RegisterScreen(),
+        '/flash': (context) => FlashScreen(),
+        '/login': (context) => LoginScreen(),
+        '/password': (context) => PasswordRecoveryScreen(),
+        '/registration': (context) => RegistrationScreen(),
+        '/home': (context) => HomeScreen(),
+        '/account': (context) => AccountScreen(),
+        '/profile': (context) => ProfileScreen(),
       },
     );
   }

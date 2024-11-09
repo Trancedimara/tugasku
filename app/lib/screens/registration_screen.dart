@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
+class RegistrationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,11 +13,11 @@ class LoginScreen extends StatelessWidget {
             children: [
               Image.asset('assets/images/logo.svg', height: 80),
               SizedBox(height: 20),
-              Text("Masuk", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+              Text("Daftar", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
               SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
-                  labelText: 'Alamat Email',
+                  labelText: 'Email atau No HP',
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -30,19 +30,16 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, '/password'),
-                    child: Text("Lupa Password?", style: TextStyle(color: Colors.blue)),
-                  ),
-                ],
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Masukkan Kembali Kata Sandi',
+                  border: OutlineInputBorder(),
+                ),
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, '/home'),
-                child: Text('Masuk'),
+                onPressed: () {},
+                child: Text('Daftar'),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.blue,
                   padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15),
